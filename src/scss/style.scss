@@ -28,6 +28,9 @@ body {
     font-size: 16px;
     font-weight: 400;
 }
+body.open {
+    overflow: hidden;
+}
 
 .container {
     max-width: 1085px;
@@ -41,6 +44,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
     }
     &__logo {
         font-family: "Unbounded", sans-serif;
@@ -87,9 +91,14 @@ body {
             padding: 22px 10px;
             border-radius: 30px;
             font-weight: 700;
+            transition: background-color .3s;
+            &:hover {
+                background-color: var(--color-additional);
+            }
         }
     }
 }
 
 
 @import 'reviews';
+@import 'feedback';

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>EdFeedback</title>
+  </head>
+  <body>
+    
+    <header class="header">
+      <div class="header__inner container">
+        <div class="header__logo"><a href="index.html">EdFeedback</a></div>
+        <nav class="header__nav">
+          <a class="link_active" href="feedback.html">feedback</a>
+          <a href="reviews.html">reviews</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="feedback container">
+        <div class="block-white">
+            <p class="block-white__title">Feedback</p>
+            <form class="feedback__form">
+                <h4 class="feedback__form-title">Тип користувача (обов’язково)</h4>
+                <p class="feedback__form-q">Хто ви?</p>
+
+                <div class="radio-group">
+                    <label class="radio-option">
+                      <input class="real-radio" type="radio" name="userType" value="student" required>
+                      <span class="custom-radio"></span>
+                      Студент
+                    </label>
+                    <label class="radio-option">
+                      <input class="real-radio" type="radio" name="userType" value="teacher">
+                      <span class="custom-radio"></span>
+                      Викладач
+                    </label>
+                    <label class="radio-option">
+                      <input class="real-radio" type="radio" name="userType" value="other">
+                      <span class="custom-radio"></span>
+                      Інше
+                    </label>
+                </div>
+
+                <h4 class="feedback__form-title">Використана платформа (обов’язково)</h4>
+                <label class="feedback__form-q" for="platform">Яку платформу ви використовували для дистанційного навчання?</label>
+                <select class="js-choice" name="platform" id="platform" required>
+                    <option value="">-- Виберіть --</option>
+                    <option value="zoom">Zoom</option>
+                    <option value="google-meet">Google Meet</option>
+                    <option value="moodle">Moodle</option>
+                    <option value="teams">Microsoft Teams</option>
+                    <option value="other">Інше</option>
+                </select>
+
+                <h4 class="feedback__form-title">Оцінка дистанційного навчання (обов’язково)</h4>
+                <label class="feedback__form-q" for="simple-rating__5">Як ви оцінюєте ефективність дистанційного навчання?</label>
+                <div>
+                    <div class="simple-rating">
+                        <div class="simple-rating__items">
+                            <input id="simple-rating__5" type="radio" class="simple-rating__item" name="simple-rating" value="5">
+                            <label for="simple-rating__5" class="simple-rating__label"></label>
+                            <input id="simple-rating__4" type="radio" class="simple-rating__item" name="simple-rating" value="4">
+                            <label for="simple-rating__4" class="simple-rating__label"></label>
+                            <input id="simple-rating__3" type="radio" class="simple-rating__item" name="simple-rating" value="3">
+                            <label for="simple-rating__3" class="simple-rating__label"></label>
+                            <input id="simple-rating__2" type="radio" class="simple-rating__item" name="simple-rating" value="2">
+                            <label for="simple-rating__2" class="simple-rating__label"></label>
+                            <input id="simple-rating__1" type="radio" class="simple-rating__item" name="simple-rating" value="1">
+                            <label for="simple-rating__1" class="simple-rating__label"></label>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="feedback__form-title">Оцінка дистанційного навчання (обов’язково)</h4>
+                <label class="feedback__form-q" for="message">Напишіть коротко про ваш досвід — що було добре, що варто покращити.</label>
+                <textarea class="feedback__form-message" placeholder="Напишіть коротко про ваш досвід" id="message" name="message" rows="5" required></textarea>
+
+                <h4 class="feedback__form-title">Ім’я (необов’язково)</h4>
+                <label class="feedback__form-q" for="name">Можете залишити ім’я або нікнейм — або залишити поле порожнім.</label>
+                <input class="feedback__form-name" type="text" id="name" name="name" placeholder="Ім’я" autocomplete="off">
+
+                <button class="feedback__form-btn" type="submit">Надіслати відгук</button>
+            </form>
+        </div>
+      </section>
+    </main>
+
+    <div class="overlay">
+        <div class="modal" id="thanks">
+            <div class="modal__title">Дякуємо за ваш відгук!</div>
+            <div class="modal__subtitle">Ви можете переглянути, що написали інші</div>
+            <a class="modal__btn" href="reviews.html">Перейти до відгуків</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
