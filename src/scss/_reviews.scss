@@ -1,0 +1,58 @@
+@import 'slider';
+
+.reviews {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    &__descr {
+        font-size: 16px;
+        text-align: center;
+        max-width: 525px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    &__sliders {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    &__slider {
+        &-item {
+            max-width: 615px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: var(--color-bg);
+            text-align: center;
+            border-radius: 30px;
+            padding: 20px 10px 40px;
+            &_v2 {
+                background-color: var(--color-additional);
+            }
+        }
+    }
+    &__item {
+        &-name {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        &-app {
+            margin-bottom: 15px;
+        }
+        &-stars {
+            margin-bottom: 15px;
+        }
+        &-date {
+            margin-bottom: 15px;
+        }
+        &-com {
+            max-width: 320px;
+            margin: 0 auto;
+        }
+    }
+}
